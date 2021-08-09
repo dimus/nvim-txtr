@@ -19,6 +19,7 @@ end
 
 function M.stop_scrolling()
   if M.timer ~= nil then
+    print("stop scrolling")
     M.timer:close()
     M.timer = nil
   end
