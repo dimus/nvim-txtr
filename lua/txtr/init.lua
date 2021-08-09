@@ -1,7 +1,7 @@
 local config = require('txtr.config')
-local util = require('txtr.util').util
+local util = require('txtr.util')
 
-local txtr = require('txtr.txtr').txtr
+local txtr = require('txtr.txtr')
 
 local function setup(opts)
   config = util.merge_tables(config, opts or {})
@@ -16,22 +16,22 @@ local function setup(opts)
 		vim.api.nvim_set_keymap(
 			'n',
 			toggle_keymap,
-			":lua require('txtr').txtr.toggle_scroll()<cr>",
-			{ silent = true, normap = true }
+			":lua require('txtr').toggle_scroll()<cr>",
+			{ silent = true, noremap = true }
 		)
 
 		vim.api.nvim_set_keymap(
 			'n',
 			slower_keymap,
-			":lua require('txtr.txtr').txtr.scroll_slower()<cr>",
-			{ silent = true, normap = true }
+			":lua require('txtr').scroll_slower()<cr>",
+			{ silent = true, noremap = true }
 		)
 
 		vim.api.nvim_set_keymap(
 			'n',
 			faster_keymap,
-			":lua require('txtr').txtr.scroll_faster()<cr>",
-			{ silent = true, normap = true }
+			":lua require('txtr').scroll_faster()<cr>",
+			{ silent = true, noremap = true }
 		)
   end
 end

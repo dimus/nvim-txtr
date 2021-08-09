@@ -1,7 +1,7 @@
 # nvim-txtr
 
 Txtr is a book and text reader for Neovim. It scrolls a text automatically,
-so the user does not have to do it by hand. It also allows to controll the
+so the user does not have to do it by hand. It also allows to control the
 speed of scrolling, pause or resume the scrolling.
 
 ## Installation
@@ -28,11 +28,11 @@ use {
 
 ## Configuration parameters
 
-The following parameters can be inluded into configuration:
+The following parameters can be included into configuration:
 
 ```lua
 require('txtr').setup({
-  -- pause is the number of milliseconds between scrolling one line down
+  -- pause is the number of milliseconds between scrolling events
   pause = 4000,
 
   -- disable_config_keymap = true will cancel creation of default
@@ -68,7 +68,7 @@ nmap <leader>k :lua require('txtr').scroll_slower()<CR>
 "   ^^^^^^^^^^ change this to what ever you want
 ```
 
-or in lua
+Or in Lua
 
 ```lua
 

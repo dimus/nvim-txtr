@@ -4,7 +4,7 @@ package.loaded['txtr.txtr'] = nil
 
 vim.api.nvim_set_keymap('n', ',r', ':luafile dev/init.lua<cr>', {})
 
-Txtr = require('txtr').txtr
+Txtr = require('txtr')
 
 vim.api.nvim_set_keymap('n', ',s', ':lua Txtr.toggle_scroll()<cr>', {})
 vim.api.nvim_set_keymap('n', ',k', ':lua Txtr.scroll_faster()<cr>', {})
