@@ -1,5 +1,5 @@
-local say = require'txtr.txtr'
+local M = require'txtr.txtr'
 
 return {
-  say = say
+  txtr = M
 }

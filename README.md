@@ -7,7 +7,7 @@ Txtr is a book and text reader for Neovim
 Add this directory to runtimepath before running nvim
 
 ```bash
-nvim --cmd 'rtp+=.'
+nvim --cmd 'set rtp+=.'
 ```
 
 For refreshing plugin run once:
