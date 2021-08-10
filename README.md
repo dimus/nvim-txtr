@@ -6,9 +6,9 @@ speed of scrolling, pause or resume the scrolling.
 
 ## Usage
 
-For reading set current buffer to `readonly` with `:view` command.
 By default `<leader><leader>` toggles autoscrolling, `<leader>j` slows
 scrolling down, `<leader>k` speeds it up.
+Buffers are not modifiable during autoscrolling by default.
 
 ## Installation
 

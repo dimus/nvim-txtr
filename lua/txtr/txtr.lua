@@ -2,6 +2,7 @@ local M = {pause = 3000, timer = nil}
 
 function M.scroll()
   print(string.format('scroll %0.1f sec/line', M.pause/1000))
+  vim.bo['ma']=false
   M.timer = vim.loop.new_timer()
   M.timer:start(M.pause, M.pause, vim.schedule_wrap(function()
     local down = vim.api.nvim_replace_termcodes('normal <C-E>', true, true, true)
@@ -22,6 +23,7 @@ function M.stop_scrolling()
     print("stop scrolling")
     M.timer:close()
     M.timer = nil
+    vim.bo['ma']=true
   end
 end
 
