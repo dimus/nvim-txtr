@@ -4,6 +4,12 @@ Txtr is a book and text reader for Neovim. It scrolls a text automatically,
 so the user does not have to do it by hand. It also allows to control the
 speed of scrolling, pause or resume the scrolling.
 
+## Usage
+
+For reading set current buffer to `readonly` with `:view` command.
+By default `<leader><leader>` toggles autoscrolling, `<leader>j` slows
+scrolling down, `<leader>k` speeds it up.
+
 ## Installation
 
 You will need Neovim v0.5 or higher for this plugin to work.
@@ -40,15 +46,15 @@ require('txtr').setup({
   disable_config_keymap = false,
 
   -- toggle_keymap sets keybinding for toggling scrolling on/off, default
-  -- toggle_keymap = ',s'
+  -- toggle_keymap = '<leader><leader>'
   toggle_keymap = ',s',
 
   -- scroll_slower_keymap sets keybinding for slowing scrolling down, default
-  -- scroll_slower_keymap = ',j'
+  -- scroll_slower_keymap = '<leader>j'
   scroll_slower_keymap = ',j',
 
   -- scroll_faster_keymap sets keybinding for speeding the scrolling up, the
-  -- default scroll_faster_keymap = ',k'
+  -- default scroll_faster_keymap = '<leader>k'
   scroll_faster = ',k'
 })
 ```

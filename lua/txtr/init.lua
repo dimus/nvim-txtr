@@ -8,9 +8,9 @@ local function setup(opts)
   txtr.pause = config.pause or 3000
 
   if not config.disable_config_keymap then
-    local toggle_keymap = config.toggle_keymap or ',s'
-    local slower_keymap = config.scroll_slower_keymap or ',j'
-    local faster_keymap = config.scroll_faster_keymap or ',k'
+    local toggle_keymap = config.toggle_keymap or '<leader><leader>'
+    local slower_keymap = config.scroll_slower_keymap or '<leader>j'
+    local faster_keymap = config.scroll_faster_keymap or '<leader>k'
 
 
 		vim.api.nvim_set_keymap(
