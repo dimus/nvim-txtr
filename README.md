@@ -10,6 +10,10 @@ By default `<leader><leader>` toggles autoscrolling, `<leader>j` slows
 scrolling down, `<leader>k` speeds it up.
 Buffers are not modifiable during autoscrolling by default.
 
+### Bookmark
+
+To return to the last read position in a book use `'"` shortcut.
+
 ## Installation
 
 You will need Neovim v0.5 or higher for this plugin to work.
