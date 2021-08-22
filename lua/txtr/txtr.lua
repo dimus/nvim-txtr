@@ -23,13 +23,15 @@ function M.toggle_scroll()
   if M.timer == nil then
     M.scroll()
   else
-    M.stop_scrolling()
+    M.stop_scrolling(true)
   end
 end
 
-function M.stop_scrolling()
+function M.stop_scrolling(verbose)
   if M.timer ~= nil then
-    print("Stop scrolling")
+    if verbose then
+      print("Stop scrolling")
+    end
     M.timer:close()
     M.timer = nil
 
@@ -47,7 +49,7 @@ function M.scroll_faster()
 end
 
 function M.change_scroll(n)
-  M.stop_scrolling()
+  M.stop_scrolling(false)
   M.pause = M.pause * n
   M.scroll()
 end
