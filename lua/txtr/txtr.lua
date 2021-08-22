@@ -1,13 +1,22 @@
 local M = {pause = 3000, timer = nil}
 
 function M.scroll()
-  print(string.format('scroll %0.1f sec/line', M.pause/1000))
-  vim.bo['ma']=false
+  print(string.format("Scroll %0.1f sec/line", M.pause / 1000))
+
+  -- modifiable is off
+  vim.bo["ma"] = false
+
   M.timer = vim.loop.new_timer()
-  M.timer:start(M.pause, M.pause, vim.schedule_wrap(function()
-    local down = vim.api.nvim_replace_termcodes('normal <C-E>', true, true, true)
-    vim.cmd(down)
-  end))
+  M.timer:start(
+    100,
+    M.pause,
+    vim.schedule_wrap(
+      function()
+        local down = vim.api.nvim_replace_termcodes("normal <C-E>", true, true, true)
+        vim.cmd(down)
+      end
+    )
+  )
 end
 
 function M.toggle_scroll()
@@ -20,10 +29,12 @@ end
 
 function M.stop_scrolling()
   if M.timer ~= nil then
-    print("stop scrolling")
+    print("Stop scrolling")
     M.timer:close()
     M.timer = nil
-    vim.bo['ma']=true
+
+    -- modifiable is on
+    vim.bo["ma"] = true
   end
 end
 
@@ -37,7 +48,7 @@ end
 
 function M.change_scroll(n)
   M.stop_scrolling()
-  M.pause = M.pause*n
+  M.pause = M.pause * n
   M.scroll()
 end
 
