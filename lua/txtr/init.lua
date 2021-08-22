@@ -15,21 +15,21 @@ local function setup(opts)
     vim.api.nvim_set_keymap(
       "n",
       toggle_keymap,
-      ":lua require('txtr').toggle_scroll()<cr>",
+      "<cmd>lua require('txtr').toggle_scroll()<cr>",
       {silent = true, noremap = true}
     )
 
     vim.api.nvim_set_keymap(
       "n",
       slower_keymap,
-      ":lua require('txtr').scroll_slower()<cr><cr>",
+      "<cmd>lua require('txtr').scroll_slower()<cr>",
       {silent = true, noremap = true}
     )
 
     vim.api.nvim_set_keymap(
       "n",
       faster_keymap,
-      ":lua require('txtr').scroll_faster()<cr><cr>",
+      "<cmd>lua require('txtr').scroll_faster()<cr>",
       {silent = true, noremap = true}
     )
   end
