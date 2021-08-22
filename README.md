@@ -27,15 +27,6 @@ You will need Neovim v0.5 or higher for this plugin to work.
 :lua require('txtr').setup()
 ```
 
-If Packer is used, configuration can be included into install:
-
-```lua
-use {
-  'dimus/nvim-txtr',
-  config = require('txtr').setup()
-}
-```
-
 ## Configuration parameters
 
 The following parameters can be included into configuration:
